@@ -1,0 +1,12 @@
+.block {
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+body {
+    font-size: 30px;
+}
+
+.text2 {
+    border: inherit;
+}
