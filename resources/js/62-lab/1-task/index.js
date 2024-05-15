@@ -1,8 +1,8 @@
-var input = document.querySelector('.js-input');
-var saveButton = document.querySelector('.js-save');
-var nameSpan = document.querySelector('.js-name');
+let input = document.querySelector('.js-input');
+let saveButton = document.querySelector('.js-save');
+let nameSpan = document.querySelector('.js-name');
 
-var name = Cookies.get('name');
+let name = Cookies.get('name');
 if (name) {
     nameSpan.textContent = name;
 }
