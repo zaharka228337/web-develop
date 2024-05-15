@@ -1,13 +1,13 @@
-var list = document.querySelector('.js-list');
-var messageList = document.querySelector('.js-message');
-var loader = document.querySelector('.loader');
-var message = document.querySelector('.message');
+let list = document.querySelector('.js-list');
+let messageList = document.querySelector('.js-message');
+let loader = document.querySelector('.loader');
+let message = document.querySelector('.message');
 
 fetch('https://jsonplaceholder.typicode.com/posts/')
     .then(response => response.json())
     .then(data => {
         data.forEach(post => {
-            var listItem = document.createElement('li');
+            let listItem = document.createElement('li');
             listItem.textContent = post.title;
             listItem.dataset.postId = post.id;
             listItem.addEventListener('click', function() {
@@ -26,7 +26,7 @@ function fetchComments(postId) {
         .then(response => response.json())
         .then(comments => {
             comments.forEach(comment => {
-                var commentItem = document.createElement('li');
+                let commentItem = document.createElement('li');
                 commentItem.textContent = comment.body;
                 commentItem.classList.add('message__item');
                 messageList.appendChild(commentItem);

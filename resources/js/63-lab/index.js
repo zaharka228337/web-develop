@@ -1,4 +1,4 @@
-var list = document.querySelector('.js-list');
+let list = document.querySelector('.js-list');
 
 fetch('https://jsonplaceholder.typicode.com/posts/')
     .then(response => response.json())
@@ -6,7 +6,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/')
         // Перебираем полученные данные
         data.forEach(post => {
             // Создаем элемент списка
-            var listItem = document.createElement('li');
+            let listItem = document.createElement('li');
             // Задаем его содержимое
             listItem.textContent = post.title;
             // Добавляем его в список
